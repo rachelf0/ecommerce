@@ -39,7 +39,7 @@ THEN I am able to successfully create, update, and delete data in my database
 'npm install mysql2'
 
 ## Usage
-Run the following command at the root of your project and answer the prompted questions:
+Run the following command at the root of your project.
 'npm install express'
 'npm install mysql2'
 'npm install dotenv'
