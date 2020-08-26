@@ -35,17 +35,18 @@ THEN I am able to successfully create, update, and delete data in my database
 
 ## Installation
 'npm init'
-'npm install inquirer'
-'npm install mysql1'
-'npm install console-table'
+'npm install sequelize'
+'npm install mysql2'
 
 ## Usage
 Run the following command at the root of your project and answer the prompted questions:
-'node start'
+'npm install express'
+'npm install mysql2'
+'npm install dotenv'
+'npm install sequelize'
 
 ## Testing
-'npm run test'
-Testing is done with jest and contains testing for all four classes: Employee, Manager, Engineer, and Intern.
+''
 
 ## Contributing
 Rachel Fritz
