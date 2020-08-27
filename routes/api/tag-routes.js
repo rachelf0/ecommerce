@@ -3,6 +3,7 @@ const { Tag, Product, ProductTag } = require('../../models');
 
 // The `/api/tags` endpoint
 
+// Route to GET ALL Tags
 router.get('/', (req, res) => {
   // find all tags
   // be sure to include its associated Product data
@@ -19,6 +20,7 @@ router.get('/', (req, res) => {
   });
 });
 
+// Route to GET a single Tag by its id
 router.get('/:id', (req, res) => {
   // find a single tag by its `id`
   // be sure to include its associated Product data
@@ -26,22 +28,71 @@ router.get('/:id', (req, res) => {
     where: {
       id: req.params.id
     },
-    attributes: [
-      'tag_name',
-    ]
+    include: {
+      model: Product,
+      attributes: [ 'product_name', 'price', 'stock', 'category_id']
+    }
   })
+  .then(dbTagData => res.json(dbTagData))
+  .catch(err => {
+    console.log(err);
+    res.status(500).json(err);
+  });
 });
 
+// Route to CREATE a Tag
 router.post('/', (req, res) => {
   // create a new tag
+  Tag.create({
+    tag_name: req.body.tag_name
+  })
+  .then(dbTagData => res.json(dbTagData))
+  .catch(err => {
+    console.log(err);
+    res.status(500).json(err);
+  });
 });
 
+// Route to UPDATE a Tag
 router.put('/:id', (req, res) => {
   // update a tag's name by its `id` value
+  Tag.update(req.body, {
+    where: {
+      id: req.params.id
+    }
+  })
+  .then(dbTagData => {
+    if (!dbTagData){
+      res.status(404).json({message: 'No tag found with this id'});
+      return;
+    }
+    res.json(dbTagData);
+  })
+  .catch(err => {
+    console.log(err);
+    res.status(500).json(err);
+  });
 });
 
+// Route to DELETE a Tag
 router.delete('/:id', (req, res) => {
   // delete on tag by its `id` value
+  Tag.destroy({
+    where: {
+      id: req.params.id
+    }
+  })
+  .then(dbTagData => {
+    if (!dbTagData) {
+      res.status(404).json({message: 'No tag found with this id'});
+      return;
+    }
+    res.json(dbTagData);
+  })
+  .catch(err => {
+    console.log(err);
+    res.status(500).json(err);
+  });
 });
 
 module.exports = router;
