@@ -2,6 +2,12 @@
 
 ## Description
 
+## Demos
+* [VS Code Walkthrough](https://drive.google.com/file/d/12LIgxmhXn4T3BxZX-zRINUZ4iL9UZ5Qd/view)
+ 
+* [Insomnia Core Walkthrough](https://drive.google.com/file/d/1qHKzdIU0VcxjHzERE_ZLIIG_bV75UrSf/view)
+
+* [Schema Usage Walkthrough](https://drive.google.com/file/d/1DWdDydTegOgkPCSq3rsYVIom6uvSwJfQ/view)
 
 ## User Story
 AS A manager at an internet retail company
@@ -23,7 +29,7 @@ THEN I am able to successfully create, update, and delete data in my database
 
 ## Table of Contents
   - [Description](#description)
-  - [Demo](#demo)
+  - [Demos](#demos)
   - [User Story](#user-story)
   - [Acceptance Criteria](#acceptance-criteria)
   - [Table of Contents](#table-of-contents)
