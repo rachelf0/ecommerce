@@ -64,4 +64,4 @@ Rachel Fritz
 ## Questions
  - Find me on GitHub: [rachelf0] (https://github.com/rachelf0) 
   - If you have any questions, please email me at: rachelfritz0@gmail.com
-  - This README was generated with ❤️ by [generate-rm] (https://github.com/rachelf0/TeampProfile)
+  - This README was generated with ❤️ by (https://github.com/rachelf0/ecommerce)
