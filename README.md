@@ -1,6 +1,7 @@
 # E-Commerce Site Back End
 
 ## Description
+Back end half of an e-commerce website built with node.js, express, mysql2, and sequelize. It contains a MySQL database that is intereacted with by the express server utilizing sequelize to update the data tables.
 
 ## Demos
 * [VS Code Walkthrough](https://drive.google.com/file/d/12LIgxmhXn4T3BxZX-zRINUZ4iL9UZ5Qd/view)
@@ -43,16 +44,19 @@ THEN I am able to successfully create, update, and delete data in my database
 'npm init'
 'npm install sequelize'
 'npm install mysql2'
+'npm install dotenv'
 
 ## Usage
 Run the following command at the root of your project.
-'npm install express'
-'npm install mysql2'
-'npm install dotenv'
-'npm install sequelize'
+'mysql -u root -p'
+Enter your password when prompted.
+'source db/schema.sql'
+'quit'
+'npm run seed'
+'npm start'
 
 ## Testing
-''
+No testing is set up at this moment. Tested externally through Insomnia Core.
 
 ## Contributing
 Rachel Fritz
